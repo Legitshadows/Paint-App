@@ -71,7 +71,7 @@ namespace Graficacion_Luis_Beltran
             this.btn_Limpia = new System.Windows.Forms.Button();
             this.gp_grosor = new System.Windows.Forms.GroupBox();
             this.btn_Examen2 = new System.Windows.Forms.Button();
-            this.rotacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_rotacion = new System.Windows.Forms.ToolStripMenuItem();
             this.gp_estilos.SuspendLayout();
             this.gp_colores.SuspendLayout();
             this.Menu_Primitivas.SuspendLayout();
@@ -335,7 +335,7 @@ namespace Graficacion_Luis_Beltran
             this.btn_Circunferencia,
             this.btn_Elipse,
             this.btn_Traslacion,
-            this.rotacionToolStripMenuItem});
+            this.btn_rotacion});
             this.Menu_Primitivas.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.Menu_Primitivas.Location = new System.Drawing.Point(0, 0);
             this.Menu_Primitivas.MdiWindowListItem = this.pixelToolStripMenuItem;
@@ -507,11 +507,12 @@ namespace Graficacion_Luis_Beltran
             this.btn_Examen2.UseVisualStyleBackColor = true;
             this.btn_Examen2.Click += new System.EventHandler(this.btn_Examen2_Click);
             // 
-            // rotacionToolStripMenuItem
+            // btn_rotacion
             // 
-            this.rotacionToolStripMenuItem.Name = "rotacionToolStripMenuItem";
-            this.rotacionToolStripMenuItem.Size = new System.Drawing.Size(71, 21);
-            this.rotacionToolStripMenuItem.Text = "Rotacion";
+            this.btn_rotacion.Name = "btn_rotacion";
+            this.btn_rotacion.Size = new System.Drawing.Size(71, 21);
+            this.btn_rotacion.Text = "Rotacion";
+            this.btn_rotacion.Click += new System.EventHandler(this.btn_rotacion_Click);
             // 
             // Form1
             // 
@@ -590,7 +591,7 @@ namespace Graficacion_Luis_Beltran
         private System.Windows.Forms.ToolStripMenuItem btn_Elipse;
         private System.Windows.Forms.Button btn_Examen2;
         private System.Windows.Forms.ToolStripMenuItem btn_Traslacion;
-        private System.Windows.Forms.ToolStripMenuItem rotacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btn_rotacion;
     }
 }
 

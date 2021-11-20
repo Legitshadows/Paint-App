@@ -14,9 +14,9 @@ namespace Graficacion_Luis_Beltran
     {
         Bitmap Lienzo;
         Color color, CFondo;
-        int sizepincel, Lados, Rx, Ry, Xc, Yc, tx, ty;
+        int sizepincel, Lados, Rx, Ry, Xc, Yc, tx, ty, x, y, angulo, auxiliar;
         string opcionMenu, id;
-        List<Point> ListaPixeles, Aux, Aux2, PuntosTG, PuntosT;
+        List<Point> ListaPixeles, Aux, Aux2, PuntosTG, PuntosT, Aux3;
         string Estilo;
         bool Lienzomax;
 
@@ -37,8 +37,9 @@ namespace Graficacion_Luis_Beltran
             Aux2 = new List<Point>();
             Estilo = "default";
             Lienzomax = true;
-            Rx = 80;
-            Ry = 120;
+            Rx = 100;
+            Ry = 150;
+            angulo = 45;
 
         }
 
@@ -115,6 +116,11 @@ namespace Graficacion_Luis_Beltran
         private void btn_Traslacion_Click(object sender, EventArgs e)
         {
             opcionMenu = "Traslacion";
+        }
+
+        private void btn_rotacion_Click(object sender, EventArgs e)
+        {
+            opcionMenu = "Rotacion";
         }
 
         //Botones de control de colores
@@ -375,6 +381,10 @@ namespace Graficacion_Luis_Beltran
                     Xc = e.X;
                     Yc = e.Y;
                     break;
+
+                case "Rotacion":
+                    Rotacion(PuntosTG, angulo, color);
+                    break;
             }
             ptb_Lienzo.Image = Lienzo;
         }
@@ -547,15 +557,18 @@ namespace Graficacion_Luis_Beltran
 
         public void PoligonoRegular(List<Point> Pixeles, Color color)
         {
-            double angulo, X, Y, i;
+            Double angulo, X, Y, i;
             angulo = 360 / Lados;
             for (i = 0; i < 360; i = i + angulo)
             {
-                X = Pixeles[0].X + Rx * Math.Cos(i * Math.PI / 180);
-                Y = Pixeles[0].Y + Rx * Math.Sin(i * Math.PI / 180);
+                X = Pixeles[0].X + Rx * Math.Cos((i + 90 * (Lados - 2) / Lados) * Math.PI / 180);
+                Y = Pixeles[0].Y + Rx * Math.Sin((i + 90 * (Lados - 2) / Lados) * Math.PI / 180);
                 Aux2.Add(new Point(Convert.ToInt32(X), Convert.ToInt32(Y)));
+            
             }
+            
             PoligonoIrregular(Aux2, color);
+            Aux3 = new List<Point>(Aux2);
             Aux2.Clear();
         }
 
@@ -953,6 +966,71 @@ namespace Graficacion_Luis_Beltran
             PuntosT.Clear();
 
         }
+
+        private void Rotacion(List<Point> PuntosTG, int angulo, Color ColorPixel)
+        {
+            if (id== "Poligono Regular")
+            {
+                PuntosTG = new List<Point>(Aux3);
+            }
+            
+            for (int i = 0; i < PuntosTG.Count; i++)
+            {
+                x = Convert.ToInt32(Xc + (PuntosTG[i].X - Xc) * Math.Cos(angulo * Math.PI / 180) - (PuntosTG[i].Y - Yc) * Math.Sin(angulo * Math.PI / 180));
+                y = Convert.ToInt32(Yc + (PuntosTG[i].X - Xc) * Math.Sin(angulo * Math.PI / 180) + (PuntosTG[i].Y - Yc) * Math.Cos(angulo * Math.PI / 180));
+                PuntosT.Add(new Point(x, y));
+            }
+
+            switch (id)
+            {
+                case "Pixel":
+
+                    Pixeles(PuntosTG[0].X, PuntosTG[0].Y, color);
+                    Pixeles(PuntosT[0].X, PuntosT[0].Y, CFondo);
+                    break;
+
+                case "Recta":
+
+                    Recta(PuntosTG, CFondo);
+                    Recta(PuntosT, color);
+                    break;
+
+                case "Poligono Irregular":
+
+                    PoligonoIrregular(PuntosTG, CFondo);
+                    PoligonoIrregular(PuntosT, color);
+                    break;
+
+                case "Poligono Regular":
+
+                    PoligonoIrregular(PuntosTG, CFondo);
+                    PoligonoIrregular(PuntosT, color);
+                    break;
+
+                case "Circunferencia":
+
+                    Circunferencia(PuntosTG, Rx, CFondo);
+                    Circunferencia(PuntosT, Rx, ColorPixel);
+                    break;
+
+                case "Elipse":
+
+                    Elipse(PuntosTG, Rx, Ry, CFondo);
+                    Elipse(PuntosT, Ry, Rx, ColorPixel);
+                    auxiliar = Rx;
+                    Rx = Ry;
+                    Ry = auxiliar;
+                    break;
+            }
+            for (int j = 0; j < PuntosTG.Count; j++)
+            {
+                PuntosTG[j] = PuntosT[j];
+            }
+            Aux3 = new List<Point>(PuntosT);
+            PuntosT.Clear();
+
+        }
+
         public void BotonSeleccionado(Button boton, GroupBox grupo)
         {
             var Botones = grupo.Controls.OfType<Button>();
