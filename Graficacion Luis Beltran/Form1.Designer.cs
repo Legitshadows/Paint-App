@@ -66,12 +66,16 @@ namespace Graficacion_Luis_Beltran
             this.btn_Circunferencia = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Elipse = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Traslacion = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_rotacion = new System.Windows.Forms.ToolStripMenuItem();
             this.lbl_coordenadas = new System.Windows.Forms.Label();
             this.ptb_Lienzo = new System.Windows.Forms.PictureBox();
             this.btn_Limpia = new System.Windows.Forms.Button();
             this.gp_grosor = new System.Windows.Forms.GroupBox();
             this.btn_Examen2 = new System.Windows.Forms.Button();
-            this.btn_rotacion = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_Escalamiento = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_Aumentar = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_Disminuir = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_Rectangulo = new System.Windows.Forms.ToolStripMenuItem();
             this.gp_estilos.SuspendLayout();
             this.gp_colores.SuspendLayout();
             this.Menu_Primitivas.SuspendLayout();
@@ -335,7 +339,8 @@ namespace Graficacion_Luis_Beltran
             this.btn_Circunferencia,
             this.btn_Elipse,
             this.btn_Traslacion,
-            this.btn_rotacion});
+            this.btn_rotacion,
+            this.btn_Escalamiento});
             this.Menu_Primitivas.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.Menu_Primitivas.Location = new System.Drawing.Point(0, 0);
             this.Menu_Primitivas.MdiWindowListItem = this.pixelToolStripMenuItem;
@@ -384,6 +389,7 @@ namespace Graficacion_Luis_Beltran
             this.btn_PolignoRegular.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_Triangulo,
             this.btn_Cuadrado,
+            this.btn_Rectangulo,
             this.btn_Pentagono,
             this.btn_Hexagono});
             this.btn_PolignoRegular.Name = "btn_PolignoRegular";
@@ -394,28 +400,28 @@ namespace Graficacion_Luis_Beltran
             // btn_Triangulo
             // 
             this.btn_Triangulo.Name = "btn_Triangulo";
-            this.btn_Triangulo.Size = new System.Drawing.Size(139, 22);
+            this.btn_Triangulo.Size = new System.Drawing.Size(180, 22);
             this.btn_Triangulo.Text = "Triangulo";
             this.btn_Triangulo.Click += new System.EventHandler(this.btn_Triangulo_Click);
             // 
             // btn_Cuadrado
             // 
             this.btn_Cuadrado.Name = "btn_Cuadrado";
-            this.btn_Cuadrado.Size = new System.Drawing.Size(139, 22);
+            this.btn_Cuadrado.Size = new System.Drawing.Size(180, 22);
             this.btn_Cuadrado.Text = "Cuadrado";
             this.btn_Cuadrado.Click += new System.EventHandler(this.btn_Cuadrado_Click);
             // 
             // btn_Pentagono
             // 
             this.btn_Pentagono.Name = "btn_Pentagono";
-            this.btn_Pentagono.Size = new System.Drawing.Size(139, 22);
+            this.btn_Pentagono.Size = new System.Drawing.Size(180, 22);
             this.btn_Pentagono.Text = "Pentagono";
             this.btn_Pentagono.Click += new System.EventHandler(this.btn_Pentagono_Click);
             // 
             // btn_Hexagono
             // 
             this.btn_Hexagono.Name = "btn_Hexagono";
-            this.btn_Hexagono.Size = new System.Drawing.Size(139, 22);
+            this.btn_Hexagono.Size = new System.Drawing.Size(180, 22);
             this.btn_Hexagono.Text = "Hexagono";
             this.btn_Hexagono.Click += new System.EventHandler(this.btn_Hexagono_Click);
             // 
@@ -440,6 +446,13 @@ namespace Graficacion_Luis_Beltran
             this.btn_Traslacion.Size = new System.Drawing.Size(78, 21);
             this.btn_Traslacion.Text = "Traslacion";
             this.btn_Traslacion.Click += new System.EventHandler(this.btn_Traslacion_Click);
+            // 
+            // btn_rotacion
+            // 
+            this.btn_rotacion.Name = "btn_rotacion";
+            this.btn_rotacion.Size = new System.Drawing.Size(71, 21);
+            this.btn_rotacion.Text = "Rotacion";
+            this.btn_rotacion.Click += new System.EventHandler(this.btn_rotacion_Click);
             // 
             // lbl_coordenadas
             // 
@@ -507,12 +520,38 @@ namespace Graficacion_Luis_Beltran
             this.btn_Examen2.UseVisualStyleBackColor = true;
             this.btn_Examen2.Click += new System.EventHandler(this.btn_Examen2_Click);
             // 
-            // btn_rotacion
+            // btn_Escalamiento
             // 
-            this.btn_rotacion.Name = "btn_rotacion";
-            this.btn_rotacion.Size = new System.Drawing.Size(71, 21);
-            this.btn_rotacion.Text = "Rotacion";
-            this.btn_rotacion.Click += new System.EventHandler(this.btn_rotacion_Click);
+            this.btn_Escalamiento.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_Aumentar,
+            this.btn_Disminuir});
+            this.btn_Escalamiento.Name = "btn_Escalamiento";
+            this.btn_Escalamiento.Size = new System.Drawing.Size(96, 21);
+            this.btn_Escalamiento.Text = "Escalamiento";
+            this.btn_Escalamiento.Click += new System.EventHandler(this.btn_Escalamiento_Click);
+            // 
+            // btn_Aumentar
+            // 
+            this.btn_Aumentar.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_Aumentar.Name = "btn_Aumentar";
+            this.btn_Aumentar.Size = new System.Drawing.Size(180, 22);
+            this.btn_Aumentar.Text = "Aumentar";
+            this.btn_Aumentar.Click += new System.EventHandler(this.btn_Aumentar_Click);
+            // 
+            // btn_Disminuir
+            // 
+            this.btn_Disminuir.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_Disminuir.Name = "btn_Disminuir";
+            this.btn_Disminuir.Size = new System.Drawing.Size(180, 22);
+            this.btn_Disminuir.Text = "Disminuir";
+            this.btn_Disminuir.Click += new System.EventHandler(this.btn_Disminuir_Click);
+            // 
+            // btn_Rectangulo
+            // 
+            this.btn_Rectangulo.Name = "btn_Rectangulo";
+            this.btn_Rectangulo.Size = new System.Drawing.Size(180, 22);
+            this.btn_Rectangulo.Text = "Rectangulo";
+            this.btn_Rectangulo.Click += new System.EventHandler(this.btn_Rectangulo_Click);
             // 
             // Form1
             // 
@@ -592,6 +631,10 @@ namespace Graficacion_Luis_Beltran
         private System.Windows.Forms.Button btn_Examen2;
         private System.Windows.Forms.ToolStripMenuItem btn_Traslacion;
         private System.Windows.Forms.ToolStripMenuItem btn_rotacion;
+        private System.Windows.Forms.ToolStripMenuItem btn_Escalamiento;
+        private System.Windows.Forms.ToolStripMenuItem btn_Aumentar;
+        private System.Windows.Forms.ToolStripMenuItem btn_Disminuir;
+        private System.Windows.Forms.ToolStripMenuItem btn_Rectangulo;
     }
 }
 
