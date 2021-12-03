@@ -351,7 +351,7 @@ namespace Graficacion_Luis_Beltran
             this.Menu_Primitivas.Location = new System.Drawing.Point(0, 0);
             this.Menu_Primitivas.MdiWindowListItem = this.pixelToolStripMenuItem;
             this.Menu_Primitivas.Name = "Menu_Primitivas";
-            this.Menu_Primitivas.Size = new System.Drawing.Size(1393, 25);
+            this.Menu_Primitivas.Size = new System.Drawing.Size(996, 25);
             this.Menu_Primitivas.TabIndex = 1;
             // 
             // pixelToolStripMenuItem
@@ -512,7 +512,7 @@ namespace Graficacion_Luis_Beltran
             this.ptb_Lienzo.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ptb_Lienzo.Location = new System.Drawing.Point(31, 172);
             this.ptb_Lienzo.Name = "ptb_Lienzo";
-            this.ptb_Lienzo.Size = new System.Drawing.Size(1322, 380);
+            this.ptb_Lienzo.Size = new System.Drawing.Size(925, 380);
             this.ptb_Lienzo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.ptb_Lienzo.TabIndex = 30;
             this.ptb_Lienzo.TabStop = false;
@@ -597,6 +597,7 @@ namespace Graficacion_Luis_Beltran
             this.btn_Examen3.TabIndex = 36;
             this.btn_Examen3.Text = "Examen 3";
             this.btn_Examen3.UseVisualStyleBackColor = true;
+            this.btn_Examen3.Click += new System.EventHandler(this.btn_Examen3_Click);
             // 
             // Form1
             // 
@@ -605,7 +606,7 @@ namespace Graficacion_Luis_Beltran
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1393, 564);
+            this.ClientSize = new System.Drawing.Size(996, 564);
             this.Controls.Add(this.btn_Examen3);
             this.Controls.Add(this.btn_Examen1);
             this.Controls.Add(this.btn_Relleno);

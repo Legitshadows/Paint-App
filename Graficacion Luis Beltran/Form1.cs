@@ -232,7 +232,7 @@ namespace Graficacion_Luis_Beltran
 
         }
 
-        
+
         private void Grosor2_Click(object sender, EventArgs e)
         {
             sizepincel = 1;
@@ -381,6 +381,151 @@ namespace Graficacion_Luis_Beltran
             ptb_Lienzo.Image = Lienzo;
         }
 
+        private void btn_Examen3_Click(object sender, EventArgs e)
+        {
+            if (WindowState.ToString() == "Maximized" && Lienzomax)
+            {
+                Lienzo = new Bitmap(Size.Width, Size.Height);
+                Lienzomax = false;
+            }
+
+            List<Point> Examen3 = new List<Point>();
+
+            //Color de fondo para el lienzo jeje
+            ptb_Lienzo.BackColor = Color.Black;
+
+            //Primer Elipse
+            Rx = 180; Ry = 120;
+            Examen3.Add(new Point(890, 414));
+            sizepincel = 2;
+            Elipse(Examen3, Rx, Ry, Color.White);
+            Examen3.Clear();
+
+            //Segundo Elipse
+            Rx = 240; Ry = 180;
+            Examen3.Add(new Point(890, 414));
+            sizepincel = 2;
+            Elipse(Examen3, Rx, Ry, Color.White);
+            Examen3.Clear();
+
+            //Tercer Elipse
+            Rx = 340; Ry = 220;
+            Examen3.Add(new Point(890, 414));
+            sizepincel = 2;
+            Elipse(Examen3, Rx, Ry, Color.White);
+            Examen3.Clear();
+
+            //Cuarto Elipse
+            Rx = 520; Ry = 280;
+            Examen3.Add(new Point(890, 400));
+            sizepincel = 2;
+            Elipse( Examen3, Rx, Ry, Color.White);
+            Examen3.Clear();
+
+            
+            //Quinto Elipse
+            Rx = 720; Ry = 340;
+            Examen3.Add(new Point(890, 414));
+            sizepincel = 2;
+            Elipse(Examen3, Rx, Ry, Color.White);
+            Examen3.Clear();
+
+            //Sexto Elipse
+            Rx = 860; Ry = 400;
+            Examen3.Add(new Point(890, 414));
+            sizepincel = 2;
+            Elipse(Examen3, Rx, Ry, Color.White);
+            Examen3.Clear();
+
+            //El Sol
+            Rx = 70;
+            Examen3.Add(new Point(815, 415));
+            Circunferencia(Examen3, Rx, Color.OrangeRed);
+            Relleno(784, 415, Color.OrangeRed);
+            Examen3.Clear();
+
+            //El Mercurio
+            Rx = 20;
+            Examen3.Add(new Point(964, 305));
+            Circunferencia(Examen3, Rx, Color.SandyBrown);
+            Relleno(959, 314, Color.SandyBrown);
+            Relleno(968, 297, Color.SandyBrown);
+            Relleno(964, 305, Color.SandyBrown);
+            Examen3.Clear();
+
+            //El Venus
+            Rx = 40;
+            Examen3.Add(new Point(1068, 292));
+            Circunferencia(Examen3, Rx, Color.Brown);
+            Relleno(1068, 307, Color.Brown);
+            Relleno(1068, 281, Color.Brown);
+            Relleno(1068, 292, Color.Brown);
+            Examen3.Clear();
+
+            //El Tierra
+            //1153, 552
+            //1139, 533
+            //1159, 576
+            Rx = 50;
+            Examen3.Add(new Point(1153, 552));
+            Circunferencia(Examen3, Rx, Color.Navy);
+            Relleno(1139, 533, Color.Navy);
+            Relleno(1159, 576, Color.Navy);
+            Relleno(1153, 552, Color.Navy);
+            Examen3.Clear();
+
+            //El Luna
+            //1235, 519
+            //
+            //
+            Rx = 10;
+            Examen3.Add(new Point(1235, 519));
+            Circunferencia(Examen3, Rx, Color.LightGray);
+            Relleno(1235, 519, Color.LightGray);
+            Examen3.Clear();
+
+            //El Luna
+            //1090, 658
+            //1088, 648
+            //1094, 666
+            Rx = 20;
+            Examen3.Add(new Point(1090, 658));
+            Circunferencia(Examen3, Rx, Color.DarkOrange);
+            Relleno(1088, 648, Color.DarkOrange);
+            Relleno(1090, 658, Color.DarkOrange); 
+            Relleno(1094, 666, Color.DarkOrange);
+            Examen3.Clear();
+
+            //El Jupiter
+            //1202, 720
+            //1196, 711
+            //1201, 933
+            Rx = 50;
+            Examen3.Add(new Point(1202, 720));
+            Circunferencia(Examen3, Rx, Color.FromArgb(255, 229, 204));
+            Relleno(1196, 711, Color.FromArgb(255, 229, 204));
+            Relleno(1207, 730, Color.FromArgb(255, 229, 204));
+            Relleno(1202, 720, Color.FromArgb(255, 229, 204));
+            Examen3.Clear();
+
+           
+            //El Saturno
+            //1428, 725
+            //1418, 796
+            //1436, 750
+            Rx = 40;
+            Examen3.Add(new Point(1427, 725));
+            Circunferencia(Examen3, Rx, Color.FromArgb(225, 178, 102));
+            Relleno(1418, 707, Color.FromArgb(225, 178, 102));
+            Relleno(1436, 736, Color.FromArgb(225, 178, 102));
+            Relleno(1427, 725, Color.FromArgb(225, 178, 102));
+            Examen3.Clear();
+           
+            //Como en el evento MouseClick, activa la imagen justo cuando lo presionan
+            ptb_Lienzo.Image = Lienzo;
+
+        }
+
         //MouseClick evento
         private void Ptb_Lienzo_MouseClick(object sender, MouseEventArgs e)
         {
@@ -503,7 +648,10 @@ namespace Graficacion_Luis_Beltran
         {
             Lienzo = new Bitmap(ptb_Lienzo.Width, ptb_Lienzo.Height);
             ptb_Lienzo.Image = Lienzo;
-            
+            ptb_Lienzo.BackColor = Color.FromArgb(241, 239, 226);
+
+
+
         }
 
         //metodos programados
