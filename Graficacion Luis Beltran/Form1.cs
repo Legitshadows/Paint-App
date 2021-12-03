@@ -17,7 +17,7 @@ namespace Graficacion_Luis_Beltran
         int sizepincel, Lados, Radio, Rx, Ry, Xc, Yc, tx, ty, x, y, angulo, auxiliar;
         float Sx, Sy;
         string opcionMenu, id;
-        List<Point> ListaPixeles, Aux, Aux2, PuntosTG, PuntosT, Aux3;
+        List<Point> ListaPixeles, Aux, Aux2, ListaAuxExamen1, PuntosTG, PuntosT, Aux3;
         string Estilo;
         bool Lienzomax;
 
@@ -36,6 +36,7 @@ namespace Graficacion_Luis_Beltran
             PuntosTG = new List<Point>();
             Aux = new List<Point>();
             Aux2 = new List<Point>();
+            ListaAuxExamen1 = new List<Point>();
             Estilo = "default";
             Lienzomax = true;
             Radio = 80;
@@ -150,6 +151,12 @@ namespace Graficacion_Luis_Beltran
             Sy = 0.9F;
         }
 
+        // Boton de relleno
+        private void btn_Relleno_Click(object sender, EventArgs e)
+        {
+            opcionMenu = "Relleno";
+        }
+
         //Botones de control de colores
         private void Red_Click(object sender, EventArgs e)
         {
@@ -225,6 +232,7 @@ namespace Graficacion_Luis_Beltran
 
         }
 
+        
         private void Grosor2_Click(object sender, EventArgs e)
         {
             sizepincel = 1;
@@ -258,6 +266,53 @@ namespace Graficacion_Luis_Beltran
         }
 
         //Botones de Examanes
+        private void btn_Examen1_Click(object sender, EventArgs e)
+        {
+            List<Point> ListaE = new List<Point>();
+
+            //Recta del punto 1 al 2
+            Point Punto0 = ListaAuxExamen1[0];
+            ListaE.Add(Punto0);
+            Point Punto1 = ListaAuxExamen1[1];
+            ListaE.Add(Punto1);
+            sizepincel = 1;
+            Estilo = "default";
+            Recta(ListaE, Color.Red);
+            ListaE.Clear();
+
+            //Recta del punto 2 al 3
+            ListaE.Add(Punto1);
+            Point Punto2 = ListaAuxExamen1[2];
+            ListaE.Add(Punto2);
+            sizepincel = 2;
+            Estilo = "punteado";
+            Recta(ListaE, Color.Blue);
+            ListaE.Clear();
+
+            //Recta del punto 3 al 4
+            ListaE.Add(Punto2);
+            Point Punto3 = ListaAuxExamen1[3];
+            ListaE.Add(Punto3);
+            sizepincel = 0;
+            Estilo = "segmentado";
+            Recta(ListaE, Color.Blue);
+            ListaE.Clear();
+
+            //Recta del punto 4 al 5
+            ListaE.Add(Punto3);
+            Point Punto4 = ListaAuxExamen1[4];
+            ListaE.Add(Punto4);
+            sizepincel = 2;
+            Estilo = "punteado";
+            Recta(ListaE, Color.Blue);
+            ListaE.Clear();
+
+            ListaAuxExamen1.Clear();
+            ptb_Lienzo.Image = Lienzo;
+            btn_Examen1.Enabled = false;
+
+        }
+
         private void btn_Examen2_Click(object sender, EventArgs e)
         {
             if (WindowState.ToString() == "Maximized" && Lienzomax)
@@ -341,6 +396,14 @@ namespace Graficacion_Luis_Beltran
                 case "Pixel":
                     {
                         Pixeles(e.X, e.Y, color);
+                        if (color == Color.Yellow && sizepincel == 2)
+                        {
+                            ListaAuxExamen1.Add(new Point(e.X, e.Y));
+                            if (ListaAuxExamen1.Count >= 5)
+                            {
+                                btn_Examen1.Enabled = true;
+                            }
+                        }
                         Xc = e.X;
                         Yc = e.Y;
                         PuntosTG = new List<Point>(ListaPixeles);
@@ -427,6 +490,10 @@ namespace Graficacion_Luis_Beltran
                 case "Escalamiento":
                     Escalamiento(PuntosTG, Sx, Sy, color);
                     break;
+
+                case "Relleno":
+                    Relleno(e.X, e.Y, color);
+                    break;
             }
             ptb_Lienzo.Image = Lienzo;
         }
@@ -434,8 +501,9 @@ namespace Graficacion_Luis_Beltran
         //Boton de limpieza
         private void Limpia_Click(object sender, EventArgs e)
         {
-            ptb_Lienzo.Image = Lienzo;
             Lienzo = new Bitmap(ptb_Lienzo.Width, ptb_Lienzo.Height);
+            ptb_Lienzo.Image = Lienzo;
+            
         }
 
         //metodos programados
@@ -1121,6 +1189,29 @@ namespace Graficacion_Luis_Beltran
             PuntosT.Clear();
         }
 
+        private void Relleno(int X, int Y, Color CRelleno)
+        {
+            CRelleno = Color.FromArgb(CRelleno.ToArgb());
+            Color ColorF = Lienzo.GetPixel(X, Y);
+            Stack<Point> Vecinos = new Stack<Point>();
+            Vecinos.Push(new Point(X, Y));
+            while (Vecinos.Count != 0)
+            {
+                Point p = Vecinos.Pop();
+                if (p.X > 0 && p.X < Lienzo.Width && p.Y > 0 && p.Y < Lienzo.Height)
+                {
+                    if (ColorF != CRelleno && ColorF == Lienzo.GetPixel(p.X, p.Y))
+                    {
+                        Lienzo.SetPixel(p.X, p.Y, CRelleno);
+                        Vecinos.Push(new Point(p.X + 1, p.Y));
+                        Vecinos.Push(new Point(p.X - 1, p.Y));
+                        Vecinos.Push(new Point(p.X, p.Y + 1));
+                        Vecinos.Push(new Point(p.X, p.Y - 1));
+                    }
+                }
+            }
+        }
+
         public void BotonSeleccionado(Button boton, GroupBox grupo)
         {
             var Botones = grupo.Controls.OfType<Button>();
@@ -1144,6 +1235,7 @@ namespace Graficacion_Luis_Beltran
             lbl_coordenadas.Text = "Coordenadas: " + e.X + ", " + e.Y;
         }
 
+        
     }
 }   
 
