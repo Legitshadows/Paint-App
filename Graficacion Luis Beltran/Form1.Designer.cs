@@ -73,6 +73,8 @@ namespace Graficacion_Luis_Beltran
             this.btn_Disminuir = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Ayuda = new System.Windows.Forms.ToolStripMenuItem();
             this.imagenDeAyudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarDeColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbl_coordenadas = new System.Windows.Forms.Label();
             this.ptb_Lienzo = new System.Windows.Forms.PictureBox();
             this.btn_Limpia = new System.Windows.Forms.Button();
@@ -81,6 +83,9 @@ namespace Graficacion_Luis_Beltran
             this.btn_Relleno = new System.Windows.Forms.Button();
             this.btn_Examen1 = new System.Windows.Forms.Button();
             this.btn_Examen3 = new System.Windows.Forms.Button();
+            this.cuadroDeColoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuadroDeEditarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarDeTamañoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gp_estilos.SuspendLayout();
             this.gp_colores.SuspendLayout();
             this.Menu_Primitivas.SuspendLayout();
@@ -497,17 +502,39 @@ namespace Graficacion_Luis_Beltran
             // btn_Ayuda
             // 
             this.btn_Ayuda.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.imagenDeAyudaToolStripMenuItem});
+            this.imagenDeAyudaToolStripMenuItem,
+            this.cambiarDeColorToolStripMenuItem,
+            this.cambiarDeTamañoToolStripMenuItem});
             this.btn_Ayuda.Name = "btn_Ayuda";
             this.btn_Ayuda.Size = new System.Drawing.Size(56, 21);
             this.btn_Ayuda.Text = "Ayuda";
             // 
             // imagenDeAyudaToolStripMenuItem
             // 
+            this.imagenDeAyudaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.imagenDeAyudaToolStripMenuItem.Name = "imagenDeAyudaToolStripMenuItem";
             this.imagenDeAyudaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.imagenDeAyudaToolStripMenuItem.Text = "Imagen de Ayuda";
             this.imagenDeAyudaToolStripMenuItem.Click += new System.EventHandler(this.imagenDeAyudaToolStripMenuItem_Click);
+            // 
+            // cambiarDeColorToolStripMenuItem
+            // 
+            this.cambiarDeColorToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cambiarDeColorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.actualToolStripMenuItem,
+            this.cuadroDeColoresToolStripMenuItem,
+            this.cuadroDeEditarToolStripMenuItem});
+            this.cambiarDeColorToolStripMenuItem.Name = "cambiarDeColorToolStripMenuItem";
+            this.cambiarDeColorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cambiarDeColorToolStripMenuItem.Text = "Cambiar de Color";
+            // 
+            // actualToolStripMenuItem
+            // 
+            this.actualToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.actualToolStripMenuItem.Name = "actualToolStripMenuItem";
+            this.actualToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.actualToolStripMenuItem.Text = "Actual";
+            this.actualToolStripMenuItem.Click += new System.EventHandler(this.actualToolStripMenuItem_Click);
             // 
             // lbl_coordenadas
             // 
@@ -610,6 +637,30 @@ namespace Graficacion_Luis_Beltran
             this.btn_Examen3.UseVisualStyleBackColor = true;
             this.btn_Examen3.Click += new System.EventHandler(this.btn_Examen3_Click);
             // 
+            // cuadroDeColoresToolStripMenuItem
+            // 
+            this.cuadroDeColoresToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cuadroDeColoresToolStripMenuItem.Name = "cuadroDeColoresToolStripMenuItem";
+            this.cuadroDeColoresToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.cuadroDeColoresToolStripMenuItem.Text = "Cuadro de Colores";
+            this.cuadroDeColoresToolStripMenuItem.Click += new System.EventHandler(this.cuadroDeColoresToolStripMenuItem_Click);
+            // 
+            // cuadroDeEditarToolStripMenuItem
+            // 
+            this.cuadroDeEditarToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cuadroDeEditarToolStripMenuItem.Name = "cuadroDeEditarToolStripMenuItem";
+            this.cuadroDeEditarToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.cuadroDeEditarToolStripMenuItem.Text = "Cuadro de Editar";
+            this.cuadroDeEditarToolStripMenuItem.Click += new System.EventHandler(this.cuadroDeEditarToolStripMenuItem_Click);
+            // 
+            // cambiarDeTamañoToolStripMenuItem
+            // 
+            this.cambiarDeTamañoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cambiarDeTamañoToolStripMenuItem.Name = "cambiarDeTamañoToolStripMenuItem";
+            this.cambiarDeTamañoToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.cambiarDeTamañoToolStripMenuItem.Text = "Cambiar de Tamaño";
+            this.cambiarDeTamañoToolStripMenuItem.Click += new System.EventHandler(this.cambiarDeTamañoToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -700,6 +751,11 @@ namespace Graficacion_Luis_Beltran
         private System.Windows.Forms.ToolStripMenuItem btn_Ayuda;
         private System.Windows.Forms.Button btn_Examen3;
         private System.Windows.Forms.ToolStripMenuItem imagenDeAyudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambiarDeColorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem actualToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cuadroDeColoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cuadroDeEditarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambiarDeTamañoToolStripMenuItem;
     }
 }
 

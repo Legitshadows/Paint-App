@@ -167,6 +167,26 @@ namespace Graficacion_Luis_Beltran
             ptb_Lienzo.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
+        private void actualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Actual es el color que esta seleccionado por el usuario." + Environment.NewLine + "Solo sirve para mostrar el color actual.", "Ayuda Actual");
+        }
+
+        private void cuadroDeColoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Actual es el color que esta seleccionado por el usuario." + Environment.NewLine + "Solo sirve para mostrar el color actual.", "Ayuda Actual");
+        }
+
+        private void cuadroDeEditarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Actual es el color que esta seleccionado por el usuario." + Environment.NewLine + "Solo sirve para mostrar el color actual.", "Ayuda Actual");
+        }
+
+        private void cambiarDeTamañoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Actual es el color que esta seleccionado por el usuario." + Environment.NewLine + "Solo sirve para mostrar el color actual.", "Ayuda Actual");
+        }
+
         // Boton de relleno
         private void btn_Relleno_Click(object sender, EventArgs e)
         {
@@ -253,6 +273,7 @@ namespace Graficacion_Luis_Beltran
             sizepincel = 1;
             BotonSeleccionado(btn_grosor2, gp_grosor);
         }
+
         private void Grosor3_Click(object sender, EventArgs e)
         {
             sizepincel = 2;

@@ -325,7 +325,7 @@
   <data name="Colores.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADrvSURBVHhe7d17
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADrvSURBVHhe7d17
         fF3lfed7gQkYSwIsiUAINibNpG3SJCQ0PZ3TdEKCLMfIIpdWSadDKBdLYMlGdrClLdNpdhPSkEmaGXpO
         mqGdSVpCsKQ5wTKWBQRaoyshcQIS4dKkYIwIcUCSwcZ38HOeJT+K5eWfrL211+V51vp8X6/3y6HtH30F
         6/v9aUt77SJCiP3Z9Exz6cbHVi/aPLT6g5ueaFrc+XjTZzuHmho2DTf9pf7P39g4tPqfOoduuld7UP/P
@@ -662,7 +662,7 @@
   <data name="btn_Limpia.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGOeSURBVHhe7Z0L
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGOeSURBVHhe7Z0L
         fBTVvcfxbVurtQ/bWqutrbe9tda23r5ti9nV1qu2FUmV7IIoENlELtqHtlZwaxJFsxsVk0BaEUlmJrgW
         XyQBBAmQJ9klvLIB6wNFeYQ3SRBEyNz/2ZzYMHsIye7O7Jnd3/fz+X6Cws6cnd2c35k5r2EAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkCT0YcNOqsjN+L6S67xdycl4WMlxamqO4wVysZLj
@@ -1094,7 +1094,7 @@
   <data name="btn_Relleno.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGH0SURBVHhe7d0H
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGH0SURBVHhe7d0H
         dFTXnT9wnDhO2cSbtpvN7mZT9r/ZbJJNnBA7Bs1Ib94UIQnRBaYaN7CxAUkzkkAgMXQQQhKiCM0IUVQA
         UYyNC110YyNhJ7F3EztO7DhxvIlL3DHt/u99usIwcyVGmpk77935fs/5HPvs2RM/jeD+vvPKfX0QBEm+
         ZEytvjF1fsu3Gb/ffz3/PyMIgiAIIiO2Nce+5Ko88B298uBP9ZUHdX3FwaGOFYfGUJPov/voP0v0qoNL
