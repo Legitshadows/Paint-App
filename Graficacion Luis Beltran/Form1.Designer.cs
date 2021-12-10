@@ -71,6 +71,8 @@ namespace Graficacion_Luis_Beltran
             this.btn_Escalamiento = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Aumentar = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Disminuir = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_Ayuda = new System.Windows.Forms.ToolStripMenuItem();
+            this.imagenDeAyudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbl_coordenadas = new System.Windows.Forms.Label();
             this.ptb_Lienzo = new System.Windows.Forms.PictureBox();
             this.btn_Limpia = new System.Windows.Forms.Button();
@@ -78,7 +80,6 @@ namespace Graficacion_Luis_Beltran
             this.btn_Examen2 = new System.Windows.Forms.Button();
             this.btn_Relleno = new System.Windows.Forms.Button();
             this.btn_Examen1 = new System.Windows.Forms.Button();
-            this.btn_Ayuda = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Examen3 = new System.Windows.Forms.Button();
             this.gp_estilos.SuspendLayout();
             this.gp_colores.SuspendLayout();
@@ -122,7 +123,7 @@ namespace Graficacion_Luis_Beltran
             // 
             // Colores
             // 
-            this.Colores.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Colores.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Colores.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Colores.BackgroundImage")));
             this.Colores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Colores.Location = new System.Drawing.Point(134, 13);
@@ -150,7 +151,7 @@ namespace Graficacion_Luis_Beltran
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(0, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 15);
@@ -180,7 +181,7 @@ namespace Graficacion_Luis_Beltran
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(60, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 15);
@@ -250,7 +251,7 @@ namespace Graficacion_Luis_Beltran
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(34, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 15);
@@ -261,7 +262,7 @@ namespace Graficacion_Luis_Beltran
             // 
             this.gp_estilos.AutoSize = true;
             this.gp_estilos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.gp_estilos.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.gp_estilos.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.gp_estilos.Controls.Add(this.btn_segmentada);
             this.gp_estilos.Controls.Add(this.btn_punteada);
             this.gp_estilos.Controls.Add(this.btn_default);
@@ -311,7 +312,7 @@ namespace Graficacion_Luis_Beltran
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gp_colores.AutoSize = true;
             this.gp_colores.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.gp_colores.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.gp_colores.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.gp_colores.Controls.Add(this.Colores);
             this.gp_colores.Controls.Add(this.label1);
             this.gp_colores.Controls.Add(this.Actual);
@@ -333,7 +334,7 @@ namespace Graficacion_Luis_Beltran
             // Menu_Primitivas
             // 
             this.Menu_Primitivas.AllowItemReorder = true;
-            this.Menu_Primitivas.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Menu_Primitivas.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Menu_Primitivas.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Menu_Primitivas.ImageScalingSize = new System.Drawing.Size(10, 10);
             this.Menu_Primitivas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -493,10 +494,25 @@ namespace Graficacion_Luis_Beltran
             this.btn_Disminuir.Text = "Disminuir";
             this.btn_Disminuir.Click += new System.EventHandler(this.btn_Disminuir_Click);
             // 
+            // btn_Ayuda
+            // 
+            this.btn_Ayuda.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.imagenDeAyudaToolStripMenuItem});
+            this.btn_Ayuda.Name = "btn_Ayuda";
+            this.btn_Ayuda.Size = new System.Drawing.Size(56, 21);
+            this.btn_Ayuda.Text = "Ayuda";
+            // 
+            // imagenDeAyudaToolStripMenuItem
+            // 
+            this.imagenDeAyudaToolStripMenuItem.Name = "imagenDeAyudaToolStripMenuItem";
+            this.imagenDeAyudaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imagenDeAyudaToolStripMenuItem.Text = "Imagen de Ayuda";
+            this.imagenDeAyudaToolStripMenuItem.Click += new System.EventHandler(this.imagenDeAyudaToolStripMenuItem_Click);
+            // 
             // lbl_coordenadas
             // 
             this.lbl_coordenadas.AutoSize = true;
-            this.lbl_coordenadas.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lbl_coordenadas.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lbl_coordenadas.Location = new System.Drawing.Point(655, 35);
             this.lbl_coordenadas.Name = "lbl_coordenadas";
             this.lbl_coordenadas.Size = new System.Drawing.Size(80, 15);
@@ -535,7 +551,7 @@ namespace Graficacion_Luis_Beltran
             // 
             this.gp_grosor.AutoSize = true;
             this.gp_grosor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.gp_grosor.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.gp_grosor.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.gp_grosor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gp_grosor.Controls.Add(this.btn_grosor1);
             this.gp_grosor.Controls.Add(this.label3);
@@ -562,13 +578,14 @@ namespace Graficacion_Luis_Beltran
             // btn_Relleno
             // 
             this.btn_Relleno.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_Relleno.BackColor = System.Drawing.Color.Transparent;
             this.btn_Relleno.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Relleno.BackgroundImage")));
             this.btn_Relleno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Relleno.Location = new System.Drawing.Point(655, 92);
+            this.btn_Relleno.Location = new System.Drawing.Point(655, 88);
             this.btn_Relleno.Name = "btn_Relleno";
             this.btn_Relleno.Size = new System.Drawing.Size(67, 63);
             this.btn_Relleno.TabIndex = 34;
-            this.btn_Relleno.UseVisualStyleBackColor = true;
+            this.btn_Relleno.UseVisualStyleBackColor = false;
             this.btn_Relleno.Click += new System.EventHandler(this.btn_Relleno_Click);
             // 
             // btn_Examen1
@@ -581,12 +598,6 @@ namespace Graficacion_Luis_Beltran
             this.btn_Examen1.Text = "Examen 1";
             this.btn_Examen1.UseVisualStyleBackColor = true;
             this.btn_Examen1.Click += new System.EventHandler(this.btn_Examen1_Click);
-            // 
-            // btn_Ayuda
-            // 
-            this.btn_Ayuda.Name = "btn_Ayuda";
-            this.btn_Ayuda.Size = new System.Drawing.Size(56, 21);
-            this.btn_Ayuda.Text = "Ayuda";
             // 
             // btn_Examen3
             // 
@@ -605,7 +616,7 @@ namespace Graficacion_Luis_Beltran
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(996, 564);
             this.Controls.Add(this.btn_Examen3);
             this.Controls.Add(this.btn_Examen1);
@@ -688,6 +699,7 @@ namespace Graficacion_Luis_Beltran
         private System.Windows.Forms.Button btn_Examen1;
         private System.Windows.Forms.ToolStripMenuItem btn_Ayuda;
         private System.Windows.Forms.Button btn_Examen3;
+        private System.Windows.Forms.ToolStripMenuItem imagenDeAyudaToolStripMenuItem;
     }
 }
 

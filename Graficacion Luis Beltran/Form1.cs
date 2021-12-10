@@ -47,11 +47,13 @@ namespace Graficacion_Luis_Beltran
         }
 
         //Control de los elementos de menu
+        // Boton de Pixel
         private void Pixel_Click(object sender, EventArgs e)
         {
             opcionMenu = "Pixel";
         }
 
+        // Boton de Recta
         private void Recta_Click(object sender, EventArgs e)
         {
             opcionMenu = "Recta";
@@ -59,6 +61,7 @@ namespace Graficacion_Luis_Beltran
             id = "Recta";
         }
 
+        // Boton de Poligono Irregular
         private void PolignoIrregular_Click(object sender, EventArgs e)
         {
             opcionMenu = "Poligono Irregular";
@@ -78,16 +81,11 @@ namespace Graficacion_Luis_Beltran
             }
         }
 
+        // Boton de Poligono Regular
         private void btn_PolignoRegular_Click(object sender, EventArgs e)
         {
             opcionMenu = "Poligono Regular";
             id = "Poligono Regular";
-        }
-
-        private void btn_Circunferencia_Click(object sender, EventArgs e)
-        {
-            opcionMenu = "Circunferencia";
-            id = "Circunferencia";
         }
 
         private void btn_Triangulo_Click(object sender, EventArgs e)
@@ -118,22 +116,33 @@ namespace Graficacion_Luis_Beltran
             Lados = 6;
         }
 
+        // Boton de Circunferencia
+        private void btn_Circunferencia_Click(object sender, EventArgs e)
+        {
+            opcionMenu = "Circunferencia";
+            id = "Circunferencia";
+        }
+
+        // Boton de Elipse
         private void btn_Elipse_Click(object sender, EventArgs e)
         {
             opcionMenu = "Elipse";
             id = "Elipse";
         }
 
+        // Boton de Traslacion
         private void btn_Traslacion_Click(object sender, EventArgs e)
         {
             opcionMenu = "Traslacion";
         }
 
+        // Boton de Rotacion
         private void btn_rotacion_Click(object sender, EventArgs e)
         {
             opcionMenu = "Rotacion";
         }
 
+        // Boton de Escalamiento
         private void btn_Escalamiento_Click(object sender, EventArgs e)
         {
             opcionMenu = "Escalamiento";
@@ -149,6 +158,13 @@ namespace Graficacion_Luis_Beltran
         {
             Sx = 0.9F;
             Sy = 0.9F;
+        }
+
+        // Boton de Ayuda
+        private void imagenDeAyudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ptb_Lienzo.ImageLocation = "https://i.imgur.com/ripdaVg.png";
+            ptb_Lienzo.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         // Boton de relleno
@@ -232,13 +248,11 @@ namespace Graficacion_Luis_Beltran
 
         }
 
-
         private void Grosor2_Click(object sender, EventArgs e)
         {
             sizepincel = 1;
             BotonSeleccionado(btn_grosor2, gp_grosor);
         }
-
         private void Grosor3_Click(object sender, EventArgs e)
         {
             sizepincel = 2;
