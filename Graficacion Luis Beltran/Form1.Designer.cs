@@ -75,6 +75,24 @@ namespace Graficacion_Luis_Beltran
             this.imagenDeAyudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarDeColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuadroDeColoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuadroDeEditarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarDeTamañoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarDeEstiloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comoDibujarUnaFiguraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pixelToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.rectaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.poligonoIrregularToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.poligonoRegularToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.circuferenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.elipseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comoAplicarTransformacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.traslacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rotacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.escalamientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rellenoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comoApplicarUnRellenoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comoLimpiarLaPantallaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbl_coordenadas = new System.Windows.Forms.Label();
             this.ptb_Lienzo = new System.Windows.Forms.PictureBox();
             this.btn_Limpia = new System.Windows.Forms.Button();
@@ -83,9 +101,6 @@ namespace Graficacion_Luis_Beltran
             this.btn_Relleno = new System.Windows.Forms.Button();
             this.btn_Examen1 = new System.Windows.Forms.Button();
             this.btn_Examen3 = new System.Windows.Forms.Button();
-            this.cuadroDeColoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cuadroDeEditarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cambiarDeTamañoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gp_estilos.SuspendLayout();
             this.gp_colores.SuspendLayout();
             this.Menu_Primitivas.SuspendLayout();
@@ -504,7 +519,12 @@ namespace Graficacion_Luis_Beltran
             this.btn_Ayuda.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.imagenDeAyudaToolStripMenuItem,
             this.cambiarDeColorToolStripMenuItem,
-            this.cambiarDeTamañoToolStripMenuItem});
+            this.cambiarDeTamañoToolStripMenuItem,
+            this.cambiarDeEstiloToolStripMenuItem,
+            this.comoDibujarUnaFiguraToolStripMenuItem,
+            this.comoAplicarTransformacionToolStripMenuItem,
+            this.comoApplicarUnRellenoToolStripMenuItem,
+            this.comoLimpiarLaPantallaToolStripMenuItem});
             this.btn_Ayuda.Name = "btn_Ayuda";
             this.btn_Ayuda.Size = new System.Drawing.Size(56, 21);
             this.btn_Ayuda.Text = "Ayuda";
@@ -513,7 +533,7 @@ namespace Graficacion_Luis_Beltran
             // 
             this.imagenDeAyudaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.imagenDeAyudaToolStripMenuItem.Name = "imagenDeAyudaToolStripMenuItem";
-            this.imagenDeAyudaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imagenDeAyudaToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.imagenDeAyudaToolStripMenuItem.Text = "Imagen de Ayuda";
             this.imagenDeAyudaToolStripMenuItem.Click += new System.EventHandler(this.imagenDeAyudaToolStripMenuItem_Click);
             // 
@@ -525,7 +545,7 @@ namespace Graficacion_Luis_Beltran
             this.cuadroDeColoresToolStripMenuItem,
             this.cuadroDeEditarToolStripMenuItem});
             this.cambiarDeColorToolStripMenuItem.Name = "cambiarDeColorToolStripMenuItem";
-            this.cambiarDeColorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cambiarDeColorToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.cambiarDeColorToolStripMenuItem.Text = "Cambiar de Color";
             // 
             // actualToolStripMenuItem
@@ -535,6 +555,160 @@ namespace Graficacion_Luis_Beltran
             this.actualToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.actualToolStripMenuItem.Text = "Actual";
             this.actualToolStripMenuItem.Click += new System.EventHandler(this.actualToolStripMenuItem_Click);
+            // 
+            // cuadroDeColoresToolStripMenuItem
+            // 
+            this.cuadroDeColoresToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cuadroDeColoresToolStripMenuItem.Name = "cuadroDeColoresToolStripMenuItem";
+            this.cuadroDeColoresToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.cuadroDeColoresToolStripMenuItem.Text = "Cuadro de Colores";
+            this.cuadroDeColoresToolStripMenuItem.Click += new System.EventHandler(this.cuadroDeColoresToolStripMenuItem_Click);
+            // 
+            // cuadroDeEditarToolStripMenuItem
+            // 
+            this.cuadroDeEditarToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cuadroDeEditarToolStripMenuItem.Name = "cuadroDeEditarToolStripMenuItem";
+            this.cuadroDeEditarToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.cuadroDeEditarToolStripMenuItem.Text = "Cuadro de Editar";
+            this.cuadroDeEditarToolStripMenuItem.Click += new System.EventHandler(this.cuadroDeEditarToolStripMenuItem_Click);
+            // 
+            // cambiarDeTamañoToolStripMenuItem
+            // 
+            this.cambiarDeTamañoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cambiarDeTamañoToolStripMenuItem.Name = "cambiarDeTamañoToolStripMenuItem";
+            this.cambiarDeTamañoToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.cambiarDeTamañoToolStripMenuItem.Text = "Cambiar de Tamaño";
+            this.cambiarDeTamañoToolStripMenuItem.Click += new System.EventHandler(this.cambiarDeTamañoToolStripMenuItem_Click);
+            // 
+            // cambiarDeEstiloToolStripMenuItem
+            // 
+            this.cambiarDeEstiloToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cambiarDeEstiloToolStripMenuItem.Name = "cambiarDeEstiloToolStripMenuItem";
+            this.cambiarDeEstiloToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.cambiarDeEstiloToolStripMenuItem.Text = "Cambiar de Estilo";
+            this.cambiarDeEstiloToolStripMenuItem.Click += new System.EventHandler(this.cambiarDeEstiloToolStripMenuItem_Click);
+            // 
+            // comoDibujarUnaFiguraToolStripMenuItem
+            // 
+            this.comoDibujarUnaFiguraToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comoDibujarUnaFiguraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pixelToolStripMenuItem1,
+            this.rectaToolStripMenuItem1,
+            this.poligonoIrregularToolStripMenuItem,
+            this.poligonoRegularToolStripMenuItem1,
+            this.circuferenciaToolStripMenuItem,
+            this.elipseToolStripMenuItem});
+            this.comoDibujarUnaFiguraToolStripMenuItem.Name = "comoDibujarUnaFiguraToolStripMenuItem";
+            this.comoDibujarUnaFiguraToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.comoDibujarUnaFiguraToolStripMenuItem.Text = "Como dibujar una figura";
+            // 
+            // pixelToolStripMenuItem1
+            // 
+            this.pixelToolStripMenuItem1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pixelToolStripMenuItem1.Name = "pixelToolStripMenuItem1";
+            this.pixelToolStripMenuItem1.Size = new System.Drawing.Size(182, 22);
+            this.pixelToolStripMenuItem1.Text = "Pixel";
+            this.pixelToolStripMenuItem1.Click += new System.EventHandler(this.pixelToolStripMenuItem1_Click);
+            // 
+            // rectaToolStripMenuItem1
+            // 
+            this.rectaToolStripMenuItem1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rectaToolStripMenuItem1.Name = "rectaToolStripMenuItem1";
+            this.rectaToolStripMenuItem1.Size = new System.Drawing.Size(182, 22);
+            this.rectaToolStripMenuItem1.Text = "Recta";
+            this.rectaToolStripMenuItem1.Click += new System.EventHandler(this.rectaToolStripMenuItem1_Click);
+            // 
+            // poligonoIrregularToolStripMenuItem
+            // 
+            this.poligonoIrregularToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.poligonoIrregularToolStripMenuItem.Name = "poligonoIrregularToolStripMenuItem";
+            this.poligonoIrregularToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.poligonoIrregularToolStripMenuItem.Text = "Poligono Irregular";
+            this.poligonoIrregularToolStripMenuItem.Click += new System.EventHandler(this.poligonoIrregularToolStripMenuItem_Click);
+            // 
+            // poligonoRegularToolStripMenuItem1
+            // 
+            this.poligonoRegularToolStripMenuItem1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.poligonoRegularToolStripMenuItem1.Name = "poligonoRegularToolStripMenuItem1";
+            this.poligonoRegularToolStripMenuItem1.Size = new System.Drawing.Size(182, 22);
+            this.poligonoRegularToolStripMenuItem1.Text = "Poligono Regular";
+            this.poligonoRegularToolStripMenuItem1.Click += new System.EventHandler(this.poligonoRegularToolStripMenuItem1_Click);
+            // 
+            // circuferenciaToolStripMenuItem
+            // 
+            this.circuferenciaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.circuferenciaToolStripMenuItem.Name = "circuferenciaToolStripMenuItem";
+            this.circuferenciaToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.circuferenciaToolStripMenuItem.Text = "Circuferencia";
+            this.circuferenciaToolStripMenuItem.Click += new System.EventHandler(this.circuferenciaToolStripMenuItem_Click);
+            // 
+            // elipseToolStripMenuItem
+            // 
+            this.elipseToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.elipseToolStripMenuItem.Name = "elipseToolStripMenuItem";
+            this.elipseToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.elipseToolStripMenuItem.Text = "Elipse";
+            this.elipseToolStripMenuItem.Click += new System.EventHandler(this.elipseToolStripMenuItem_Click);
+            // 
+            // comoAplicarTransformacionToolStripMenuItem
+            // 
+            this.comoAplicarTransformacionToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comoAplicarTransformacionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.traslacionToolStripMenuItem,
+            this.rotacionToolStripMenuItem,
+            this.escalamientoToolStripMenuItem,
+            this.rellenoToolStripMenuItem});
+            this.comoAplicarTransformacionToolStripMenuItem.Name = "comoAplicarTransformacionToolStripMenuItem";
+            this.comoAplicarTransformacionToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.comoAplicarTransformacionToolStripMenuItem.Text = "Como aplicar Transformacion";
+            // 
+            // traslacionToolStripMenuItem
+            // 
+            this.traslacionToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.traslacionToolStripMenuItem.Name = "traslacionToolStripMenuItem";
+            this.traslacionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.traslacionToolStripMenuItem.Text = "Traslacion";
+            this.traslacionToolStripMenuItem.Click += new System.EventHandler(this.traslacionToolStripMenuItem_Click);
+            // 
+            // rotacionToolStripMenuItem
+            // 
+            this.rotacionToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rotacionToolStripMenuItem.Name = "rotacionToolStripMenuItem";
+            this.rotacionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rotacionToolStripMenuItem.Text = "Rotacion";
+            this.rotacionToolStripMenuItem.Click += new System.EventHandler(this.rotacionToolStripMenuItem_Click);
+            // 
+            // escalamientoToolStripMenuItem
+            // 
+            this.escalamientoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.escalamientoToolStripMenuItem.Name = "escalamientoToolStripMenuItem";
+            this.escalamientoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.escalamientoToolStripMenuItem.Text = "Escalamiento";
+            this.escalamientoToolStripMenuItem.Click += new System.EventHandler(this.escalamientoToolStripMenuItem_Click);
+            // 
+            // rellenoToolStripMenuItem
+            // 
+            this.rellenoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rellenoToolStripMenuItem.Name = "rellenoToolStripMenuItem";
+            this.rellenoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rellenoToolStripMenuItem.Text = "Relleno";
+            this.rellenoToolStripMenuItem.Click += new System.EventHandler(this.rellenoToolStripMenuItem_Click);
+            // 
+            // comoApplicarUnRellenoToolStripMenuItem
+            // 
+            this.comoApplicarUnRellenoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comoApplicarUnRellenoToolStripMenuItem.Name = "comoApplicarUnRellenoToolStripMenuItem";
+            this.comoApplicarUnRellenoToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.comoApplicarUnRellenoToolStripMenuItem.Text = "Como applicar un Relleno";
+            this.comoApplicarUnRellenoToolStripMenuItem.Click += new System.EventHandler(this.comoApplicarUnRellenoToolStripMenuItem_Click);
+            // 
+            // comoLimpiarLaPantallaToolStripMenuItem
+            // 
+            this.comoLimpiarLaPantallaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comoLimpiarLaPantallaToolStripMenuItem.Name = "comoLimpiarLaPantallaToolStripMenuItem";
+            this.comoLimpiarLaPantallaToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.comoLimpiarLaPantallaToolStripMenuItem.Text = "Como limpiar la pantalla";
+            this.comoLimpiarLaPantallaToolStripMenuItem.Click += new System.EventHandler(this.comoLimpiarLaPantallaToolStripMenuItem_Click);
             // 
             // lbl_coordenadas
             // 
@@ -637,30 +811,6 @@ namespace Graficacion_Luis_Beltran
             this.btn_Examen3.UseVisualStyleBackColor = true;
             this.btn_Examen3.Click += new System.EventHandler(this.btn_Examen3_Click);
             // 
-            // cuadroDeColoresToolStripMenuItem
-            // 
-            this.cuadroDeColoresToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.cuadroDeColoresToolStripMenuItem.Name = "cuadroDeColoresToolStripMenuItem";
-            this.cuadroDeColoresToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.cuadroDeColoresToolStripMenuItem.Text = "Cuadro de Colores";
-            this.cuadroDeColoresToolStripMenuItem.Click += new System.EventHandler(this.cuadroDeColoresToolStripMenuItem_Click);
-            // 
-            // cuadroDeEditarToolStripMenuItem
-            // 
-            this.cuadroDeEditarToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.cuadroDeEditarToolStripMenuItem.Name = "cuadroDeEditarToolStripMenuItem";
-            this.cuadroDeEditarToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.cuadroDeEditarToolStripMenuItem.Text = "Cuadro de Editar";
-            this.cuadroDeEditarToolStripMenuItem.Click += new System.EventHandler(this.cuadroDeEditarToolStripMenuItem_Click);
-            // 
-            // cambiarDeTamañoToolStripMenuItem
-            // 
-            this.cambiarDeTamañoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.cambiarDeTamañoToolStripMenuItem.Name = "cambiarDeTamañoToolStripMenuItem";
-            this.cambiarDeTamañoToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.cambiarDeTamañoToolStripMenuItem.Text = "Cambiar de Tamaño";
-            this.cambiarDeTamañoToolStripMenuItem.Click += new System.EventHandler(this.cambiarDeTamañoToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -756,6 +906,21 @@ namespace Graficacion_Luis_Beltran
         private System.Windows.Forms.ToolStripMenuItem cuadroDeColoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cuadroDeEditarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cambiarDeTamañoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambiarDeEstiloToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem comoDibujarUnaFiguraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pixelToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem rectaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem poligonoIrregularToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem poligonoRegularToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem circuferenciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem elipseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem comoAplicarTransformacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem traslacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rotacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem escalamientoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rellenoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem comoApplicarUnRellenoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem comoLimpiarLaPantallaToolStripMenuItem;
     }
 }
 

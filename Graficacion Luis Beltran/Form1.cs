@@ -160,7 +160,7 @@ namespace Graficacion_Luis_Beltran
             Sy = 0.9F;
         }
 
-        // Boton de Ayuda
+        // Botones de Ayuda
         private void imagenDeAyudaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ptb_Lienzo.ImageLocation = "https://i.imgur.com/ripdaVg.png";
@@ -169,23 +169,89 @@ namespace Graficacion_Luis_Beltran
 
         private void actualToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Actual es el color que esta seleccionado por el usuario." + Environment.NewLine + "Solo sirve para mostrar el color actual.", "Ayuda Actual");
+            MessageBox.Show("Actual es el color que esta seleccionado por el usuario." + Environment.NewLine + Environment.NewLine + "Solo sirve para mostrar el color actual.", "Ayuda Actual");
         }
 
         private void cuadroDeColoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Actual es el color que esta seleccionado por el usuario." + Environment.NewLine + "Solo sirve para mostrar el color actual.", "Ayuda Actual");
+            MessageBox.Show("Los cuadros de colores sirven para cambiar el color que se utilizara al momento de dibujar." + Environment.NewLine + Environment.NewLine + "Dale click a un cuadro y se cambiara al color que eligio.", "Ayuda Cuadro de Colores");
         }
 
         private void cuadroDeEditarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Actual es el color que esta seleccionado por el usuario." + Environment.NewLine + "Solo sirve para mostrar el color actual.", "Ayuda Actual");
+            MessageBox.Show("El cuadro de editar abre un menu lleno de muchos colores y mas para elegir" + Environment.NewLine + Environment.NewLine + "Muestra todo un repertorio de colores, al que el usuario escoge uno." + Environment.NewLine + Environment.NewLine + "Ya que se elija un color, se mostrara en Actual.", "Ayuda Cuadro de Editar");
         }
 
         private void cambiarDeTamañoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Actual es el color que esta seleccionado por el usuario." + Environment.NewLine + "Solo sirve para mostrar el color actual.", "Ayuda Actual");
+            MessageBox.Show("Este cuadro muestra los diferentes tamaños de pincel disponible." + Environment.NewLine + Environment.NewLine + "Tienen tres opciones disponisbles para su pincel:" +Environment.NewLine + Environment.NewLine + "1. Es el tamaño pequeño de todos y el primer cuadro seleccionable del menu tamaño" + Environment.NewLine + Environment.NewLine + "2. Es el tamaño mediano de todos y el segundo cuadro seleccionable del menu tamaño" + Environment.NewLine + Environment.NewLine + "3. Es el tamaño grande de todos y el tercer e ultimo cuadro seleccionable del menu tamaño" + Environment.NewLine + Environment.NewLine + "Cuando se escoja un tamaño, las figuras se dibujaran base el tamaño que se escogio.", "Ayuda Tamaño");
         }
+
+        private void cambiarDeEstiloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Este cuadro muestra los diferentes estilos de pincel disponible." + Environment.NewLine + Environment.NewLine + "Tienen tres opciones disponisbles para su pincel:" + Environment.NewLine + Environment.NewLine + "1. Es el estilo predeterminado de todos y el primer cuadro seleccionable del menu tamaño" + Environment.NewLine + Environment.NewLine + "Ejemplo del primero: ╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼" + Environment.NewLine + Environment.NewLine + "2. Es el estilo punteado de todos y el segundo cuadro seleccionable del menu tamaño" + Environment.NewLine + Environment.NewLine + "Ejemplo del segundo: ● ● ● ● ● ● ● ● ● ●" + Environment.NewLine + Environment.NewLine + "3. Es el estilo segmentado de todos y el tercer e ultimo cuadro seleccionable del menu tamaño" + Environment.NewLine + Environment.NewLine + "Ejemplo del segundo: ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─" + Environment.NewLine + Environment.NewLine + "Cuando se escoja un estilo, las figuras se dibujaran base el estilo que se escogio.", "Ayuda Estilos");
+        }
+
+        private void pixelToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Para dibujar un pixel en el lienzo, tendras que seguir estos pasos:" + Environment.NewLine + Environment.NewLine + "1. Tendras que seleccionar la opcion Pixel en el menu." + Environment.NewLine + Environment.NewLine + "2. Al momento de que este seleccionado, podra dibujar sobre el lienzo dandole click izquiero con el raton." + Environment.NewLine + Environment.NewLine + "3. Para borrar una equivocacion, dele al boton de limpiar.", "Ayuda Pixel");
+        }
+
+        private void rectaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Para dibujar una recta en el lienzo, tendras que seguir estos pasos:" + Environment.NewLine + Environment.NewLine + "1. Tendras que seleccionar la opcion de Recta en el menu." + Environment.NewLine + Environment.NewLine + "2. Tendras que dibujar dos pixeles dandole click izquierdo al raton sobre el lienzo, seperados a la distancia al gusto del usuario." + Environment.NewLine + Environment.NewLine + "3. Una recta saldra en los dos puntos que se escogio por el usuario.", "Ayuda Recta");
+        }
+
+        private void poligonoIrregularToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Para dibujar un Poligono Irregular en el lienzo, tendras que seguir estos pasos:" + Environment.NewLine + Environment.NewLine + "1. Tendras que seleccionar la opcion de Poligono Irregular en el menu." + Environment.NewLine + Environment.NewLine + "2. Tendras que escribir el numero de lados en el cuadro vacio para obtener los lados del poligono." + Environment.NewLine + Environment.NewLine + "3. Ya con los lados obtenidos, tendras que dar la cantidad de clicks por el numero de lados." + Environment.NewLine + Environment.NewLine + "4. Ya que se den los clicks, saldra el poligono irregular dibujado.", "Ayuda Poligono Irregular");
+        }
+
+        private void poligonoRegularToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Para dibujar un Poligono Regular en el lienzo, tendras que seguir estos pasos:" + Environment.NewLine + Environment.NewLine + "1. Tendras que seleccionar la opcion de Poligono Regular en el menu." + Environment.NewLine + Environment.NewLine + "2. Seleccionaras una de las opciones de figuras listadas del poligono regular." + Environment.NewLine + Environment.NewLine + "3. Ya selecionada una figura, le daras click en el lienzo y la figura se dibujara.", "Ayuda Poligono Regular");
+        }
+
+        private void circuferenciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Para dibujar una Circunferencia en el lienzo, tendras que seguir estos pasos:" + Environment.NewLine + Environment.NewLine + "1. Tendras que seleccionar la opcion de Circunferencia en el menu." + Environment.NewLine + Environment.NewLine + "2. Daras un click izquierdo para dibujar la figura sobre el lienzo." + Environment.NewLine + Environment.NewLine + "3. Ya dado el click, la circunferencia saldra sobre el lienzo.", "Ayuda Circunferencia");
+        }
+
+        private void elipseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Para dibujar un Elipse en el lienzo, tendras que seguir estos pasos:" + Environment.NewLine + Environment.NewLine + "1. Tendras que seleccionar la opcion de Elipse en el menu." + Environment.NewLine + Environment.NewLine + "2. Daras un click izquierdo para dibujar la figura sobre el lienzo." + Environment.NewLine + Environment.NewLine + "3. Ya dado el click, el elipse saldra sobre el lienzo.", "Ayuda Elipse");
+        }
+
+        private void traslacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Para poder aplicar la Traslacion de una figura, tendras que seguir estos pasos:" + Environment.NewLine + Environment.NewLine + "1. Despues de dibujar una figura en el lienzo, tendras que seleccionar la opcion de Traslacion en el menu." + Environment.NewLine + Environment.NewLine + "2. Daras un click en donde el usuario quiere mover la figura." + Environment.NewLine + Environment.NewLine + "3. La figura sera trasladada a la nueva ubicacion indicada por el click del usuario.", "Ayuda Traslacion");
+        }
+
+        private void rotacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Para poder aplicar la Rotacion de una figura, tendras que seguir estos pasos:" + Environment.NewLine + Environment.NewLine + "1. Despues de dibujar una figura en el lienzo, tendras que seleccionar la opcion de Rotacion en el menu." + Environment.NewLine + Environment.NewLine + "2. Daras un click para rotar la figura dibujada por el usuario." + Environment.NewLine + Environment.NewLine + "3. La figura sera rotada base la indicacion por el click del usuario.", "Ayuda Rotacion");
+        }
+
+        private void escalamientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Para poder aplicar el Escalamiento de una figura, tendras que seguir estos pasos:" + Environment.NewLine + Environment.NewLine + "1. Despues de dibujar una figura en el lienzo, tendras que seleccionar la opcion de Escalamiento en el menu." + Environment.NewLine + Environment.NewLine + "2. El usuario tendra que elegir si quiere aumentar o disminiuir el tamaño de la figura dandone click a la opcion." + Environment.NewLine + Environment.NewLine + "3. La figura sera escalada a la nueva indicacion por el click del usuario.", "Ayuda Escalamiento");
+        }
+
+        private void rellenoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Para poder aplicar el Relleno de una figura, tendras que seguir estos pasos:" + Environment.NewLine + Environment.NewLine + "1. Despues de dibujar una figura en el lienzo, tendras que darle click al boton de Relleno en el menu." + Environment.NewLine + Environment.NewLine + "2. El usuario tendra que seleccionar un color del cuadro de colores o del menu de editar para elegir el color de relleno." + Environment.NewLine + Environment.NewLine + "3. El usuario le dara click en la figura que quire rellenar" + Environment.NewLine + Environment.NewLine + "4. La figura sera rellenada por el color seleccionado.", "Ayuda Relleno");
+        }
+
+        private void comoApplicarUnRellenoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Para poder aplicar el Relleno de una figura, tendras que seguir estos pasos:" + Environment.NewLine + Environment.NewLine + "1. Despues de dibujar una figura en el lienzo, tendras que darle click al boton de Relleno en el menu." + Environment.NewLine + Environment.NewLine + "2. El usuario tendra que seleccionar un color del cuadro de colores o del menu de editar para elegir el color de relleno." + Environment.NewLine + Environment.NewLine + "3. El usuario le dara click en la figura que quire rellenar" + Environment.NewLine + Environment.NewLine + "4. La figura sera rellenada por el color seleccionado.", "Ayuda Relleno");
+        }
+
+        private void comoLimpiarLaPantallaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Para poder limpiar el lienzo o pantalla, tendras que seguir estos pasos:" + Environment.NewLine + Environment.NewLine + "1. Despues de dibujar las figuras o opciones seleccionadas por el usuario, el usuario tiene la opcion de limpiar el lienzo." + Environment.NewLine + Environment.NewLine + "2. El usuario tendra que darle click al boton de limpiara para borrar todo sobre el lienzo." + Environment.NewLine + Environment.NewLine + "3. Despues del click, el usuario obtendra un nuevo lienzo limpio.", "Ayuda Limpiar");
+        }
+
 
         // Boton de relleno
         private void btn_Relleno_Click(object sender, EventArgs e)
